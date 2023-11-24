@@ -82,7 +82,7 @@ function check(e) {
     charsSpans = document.querySelectorAll(".word-display span");
     for (let i = 0; i < charsSpans.length; i++) {
       // put the clicked char into the correct place
-      if (e.innerHTML == currentWord[i].toLowercase()) {
+      if (e.innerHTML == currentWord[i].toLowerCase()) {
         charsSpans[i].innerHTML = e.innerHTML.toUpperCase();
         neededChars--;
       }
