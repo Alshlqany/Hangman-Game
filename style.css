@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --main-color: #87ceae;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--main-color);
+  min-height: 100vh;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+.container .header {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid;
+  padding: 10px;
+  width: 100%;
+}
+.container .header span {
+  color: red;
+  font-weight: bold;
+}
+
+.container .box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  align-items: center;
+  gap: 70px;
+}
+.container .box img {
+  width: 270px;
+}
+
+.container .box .keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  height: 150px;
+}
+.container .box .keyboard span {
+  width: calc(100% / 9 - 5px);
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  font-weight: 600;
+}
+.container .box .keyboard span:hover {
+  background-color: #58796a;
+}
+.word-display {
+  width: 100%;
+  margin-top: 70px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.word-display span {
+  padding: 5px;
+}
+.category {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.category span {
+  color: #67927f;
+  font-weight: bold;
+}
+
+.finish {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.holder {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  gap: 20px;
+}
+
+.holder img {
+  width: 200px;
+  margin-bottom: 40px;
+}
+
+.holder .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.holder .status {
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+.holder .word {
+  margin-top: 15px;
+}
+.holder .word span {
+  color: var(--main-color);
+  font-weight: bold;
+}
+.finish .holder {
+  min-width: 400px;
+}
+.finish button {
+  outline: none;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  font-weight: 600;
+  width: 200px;
+}
+.finish button:hover {
+  background-color: #58796a;
+}
+.hiddin {
+  display: none;
+}
