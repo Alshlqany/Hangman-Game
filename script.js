@@ -58,7 +58,8 @@ let category = categories[Math.floor(Math.random() * categories.length)];
 categoryWords = words[category];
 
 // get random word from this category
-currentWord = categoryWords[Math.floor(Math.random() * categoryWords.length)];
+originalCurrentWord = categoryWords[Math.floor(Math.random() * categoryWords.length)];
+currentWord = originalCurrentWord.toLowerCase();
 
 // show the category on the page
 categoryHolder.innerHTML = `Category: <span> ${category}</span>`;
@@ -82,7 +83,7 @@ function check(e) {
     charsSpans = document.querySelectorAll(".word-display span");
     for (let i = 0; i < charsSpans.length; i++) {
       // put the clicked char into the correct place
-      if (e.innerHTML == currentWord[i].toLowerCase()) {
+      if (e.innerHTML == currentWord[i]) {
         charsSpans[i].innerHTML = e.innerHTML.toUpperCase();
         neededChars--;
       }
@@ -109,7 +110,7 @@ function finish() {
         <img src="imgs/win.gif" alt="" />
         <div class="text">
           <div class="status">Congrats!</div>
-          <div class="word">You found the word: <span>${currentWord}</span></div>
+          <div class="word">You found the word: <span>${originalCurrentWord}</span></div>
         </div>
         <button onclick=location.reload()>Play Again</button>
       </div>
@@ -120,7 +121,7 @@ function finish() {
         <img src="imgs/lost.gif" alt="" />
         <div class="text">
           <div class="status">Game Over!</div>
-          <div class="word">The correct word was: <span>${currentWord}</span></div>
+          <div class="word">The correct word was: <span>${originalCurrentWord}</span></div>
         </div>
         <button onclick=location.reload()>Play Again</button>
       </div>
