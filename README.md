@@ -1,2 +1,2 @@
 # Hangman-Game
-[Live demo](https://alshlkany.github.io/Hangman-Game/)
+[Live demo](https://alshlqany.github.io/Hangman-Game/)
